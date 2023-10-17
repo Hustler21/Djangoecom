@@ -1,0 +1,20 @@
+{% for product in products %}
+	<div class="col-md-4">
+		<figure class="card card-product-grid">
+			<div class="img-wrap">
+
+				<a href=""><img  style="height: 400px; width: 400px;" src="{{ product.images.url }}"></a>
+
+			</div> <!-- img-wrap.// -->
+			<figcaption class="info-wrap">
+				<div class="fix-height">
+					<a href="" class="title">{{ product.product_name }}</a>
+					<div class="price-wrap mt-2">
+						<span class="price">$ {{ product.description }}</span>
+					</div> <!-- price-wrap.// -->
+				</div>
+				<a href="{{ product.get_url }}" class="btn btn-block btn-primary">View Details </a>
+			</figcaption>
+		</figure>
+	</div> 
+    {% endfor %}
